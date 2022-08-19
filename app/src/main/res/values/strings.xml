@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Foo</string>
+    <string name="select">select</string>
+    <string name="cancel">cancel</string>
+</resources>
