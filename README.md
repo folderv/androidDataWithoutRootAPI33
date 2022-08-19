@@ -1,7 +1,7 @@
 # Android 13 access`/Android/data` without root
 
 
-Android 13 read and write `/Android/data` without root
+Android 13 read and write `/Android/data` or '`/Android/obb`' without root
 
 
 
