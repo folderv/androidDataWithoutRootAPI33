@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity() {
             val pkg = "com.folderv.file"
             try {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$pkg")))
+                startActivity(
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=9196025730305614222"))
+                )
             } catch (e: Exception) {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$pkg")))
             }
