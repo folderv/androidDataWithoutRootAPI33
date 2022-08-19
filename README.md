@@ -29,3 +29,6 @@ May be this is the first APP that can visit other app’s exteral data file 😀
 [<img src="/source/google-play-badge.png" width="323" height="125" />](https://play.google.com/store/apps/details?id=com.folderv.file)
 
 
+
+http://folderv.com/2022/08/16/Access-Android-data-on-Android-13/
+
