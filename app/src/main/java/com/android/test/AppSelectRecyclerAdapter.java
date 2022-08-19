@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
+import java.io.File;
 import java.util.List;
 
 public class AppSelectRecyclerAdapter extends RecyclerView.Adapter<AppSelectRecyclerAdapter.ViewHolder>
@@ -56,6 +57,10 @@ public class AppSelectRecyclerAdapter extends RecyclerView.Adapter<AppSelectRecy
             }
         });
         holder.tvName.setText(app.getName());
+        File dir = new File("/storage/emulated/0/Android/data", app.getPkg());
+        if (dir != null && dir.exists()) {
+            holder.tvName.setText("📁" + app.getName());
+        }
         holder.tvPkg.setText(pkg);
         holder.ivTag.setVisibility(app.getHasPermission() ? View.VISIBLE : View.GONE);
 
