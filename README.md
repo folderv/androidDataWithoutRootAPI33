@@ -21,4 +21,4 @@ https://youtu.be/-4H0K70WhDg
 [<img src="/source/google-play-badge.png" width="323" height="125" />](https://play.google.com/store/apps/details?id=com.folderv.file)
 
 
-[<img src="/source/com.folderv.file.webp" width="323" height="125" />]
+<img src="/source/com.folderv.file.webp" width="240" height="240" />
