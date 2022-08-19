@@ -1,16 +1,12 @@
-# `Android 13` Read and write `/Android/data` without root
+# `Android 13` Read and write `/Android/data` not need root
 
 
 `Android 13` read and write `/Android/data` or `/Android/obb` without root
 
 
-https://developer.android.com/guide/topics/providers/document-provider
-
 
 Video:
 [![Watch the video](https://img.youtube.com/vi/-4H0K70WhDg/maxresdefault.jpg)](https://youtu.be/-4H0K70WhDg)
-
-
 
 
 
