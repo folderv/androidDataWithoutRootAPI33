@@ -17,6 +17,9 @@ https://youtu.be/-4H0K70WhDg
 
 ## My App FV File Manager
 
+May be this is the first APP that can visit other app’s exteral data file 😀.
+
+
 
 <img src="/source/com.folderv.file.webp" width="240" height="240" />
 
