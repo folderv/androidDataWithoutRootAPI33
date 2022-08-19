@@ -1,14 +1,13 @@
-# Android 13 access`/Android/data` without root
+# `Android 13` Read and write `/Android/data` without root
 
 
-Android 13 read and write `/Android/data` or `/Android/obb` without root
+`Android 13` read and write `/Android/data` or `/Android/obb` without root
 
 
 https://developer.android.com/guide/topics/providers/document-provider
 
 
-https://youtu.be/-4H0K70WhDg
-
+Video:
 [![Watch the video](https://img.youtube.com/vi/-4H0K70WhDg/maxresdefault.jpg)](https://youtu.be/-4H0K70WhDg)
 
 
@@ -21,13 +20,13 @@ May be this is the first APP that can visit other app’s exteral data file 😀
 
 
 
-<img src="/source/com.folderv.file.webp" width="240" height="240" />
-
 
 [<img src="/source/coolapk-badge.png" width="323" height="125" />](https://www.coolapk.com/apk/com.folderv.file)
 
 [<img src="/source/google-play-badge.png" width="323" height="125" />](https://play.google.com/store/apps/details?id=com.folderv.file)
 
+
+<img src="/source/com.folderv.file.webp" width="240" height="240" />
 
 
 http://folderv.com/2022/08/16/Access-Android-data-on-Android-13/
