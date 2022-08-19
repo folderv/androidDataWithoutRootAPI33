@@ -6,7 +6,10 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.documentfile.provider.DocumentFile
+import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +23,13 @@ class MainActivity : AppCompatActivity() {
         const val REQ_SAF_R_OBB  = 202036
     }
 
+    var tv: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        tv = findViewById(R.id.tv)
         findViewById<View>(R.id.btnGo).setOnClickListener {
             var docId = DOCID_ANDROID_DATA
             if (Build.VERSION.SDK_INT >= 33) {
@@ -87,6 +93,21 @@ class MainActivity : AppCompatActivity() {
     @Synchronized
     private fun goSAF(uri: Uri, docId: String? = null, hide: Boolean? = false) {
         // read and write Storage Access Framework https://developer.android.com/guide/topics/providers/document-provider
+        val root = DocumentFile.fromTreeUri(this, uri);
+        // make a new dir
+        //val dir = root?.createDirectory("test")
+
+        //list children
+        root?.listFiles()?.let {
+            val sb = StringBuilder()
+            for (documentFile in it) {
+                if(documentFile.isDirectory){
+                    sb.append("📁")
+                }
+                sb.append(documentFile.name).append('\n')
+            }
+            tv?.text = sb.toString()
+        }
     }
 
     private fun goAndroidData(path: String?) {
