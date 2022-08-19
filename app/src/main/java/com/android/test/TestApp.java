@@ -1,8 +1,8 @@
 package com.android.test;
 
-import android.app.Application;
+import androidx.multidex.MultiDexApplication;
 
-public class TestApp extends Application {
+public class TestApp extends MultiDexApplication {
     public static TestApp instance;
 
     @Override

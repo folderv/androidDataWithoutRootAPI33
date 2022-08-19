@@ -18,9 +18,6 @@
         android:name=".TestApp"
         android:theme="@style/Theme.Foo">
         <activity
-            android:name=".JavaMainActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
