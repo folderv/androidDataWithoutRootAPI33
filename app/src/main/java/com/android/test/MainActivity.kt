@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     @Synchronized
     private fun goSAF(uri: Uri, docId: String? = null, hide: Boolean? = false) {
-
+        // read and write Storage Access Framework https://developer.android.com/guide/topics/providers/document-provider
     }
 
     private fun goAndroidData(path: String?) {
