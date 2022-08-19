@@ -57,8 +57,7 @@ public class AppSelectRecyclerAdapter extends RecyclerView.Adapter<AppSelectRecy
             }
         });
         holder.tvName.setText(app.getName());
-        File dir = new File("/storage/emulated/0/Android/data", app.getPkg());
-        if (dir != null && dir.exists()) {
+        if (app.getExits()) {
             holder.tvName.setText("📁" + app.getName());
         }
         holder.tvPkg.setText(pkg);

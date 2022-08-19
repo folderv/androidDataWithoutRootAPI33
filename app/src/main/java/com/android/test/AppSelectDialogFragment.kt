@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -14,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.io.File
 
 class AppSelectDialogFragment : AppCompatDialogFragment() {
 
@@ -86,11 +86,15 @@ class AppSelectDialogFragment : AppCompatDialogFragment() {
                         item.name = app.activityInfo.loadLabel(pm).toString()
                         item.desk = true
                         if (isAndroidData) {
+                            val dir = File("/storage/emulated/0/Android/data", appPkg)
+                            item.exits = dir!=null && dir.exists()
                             item.hasPermission = dataPkg.contains(appPkg)
                             if (item.hasPermission) {
                                 item.uri = dataPkg[appPkg]
                             }
                         } else {
+                            val dir = File("/storage/emulated/0/Android/obb", appPkg)
+                            item.exits = dir!=null && dir.exists()
                             item.hasPermission = obbPkg.contains(appPkg)
                             if (item.hasPermission) {
                                 item.uri = obbPkg[appPkg]
@@ -111,11 +115,15 @@ class AppSelectDialogFragment : AppCompatDialogFragment() {
                         item.name = application.loadLabel(pm).toString()
                         item.desk = false
                         if (isAndroidData) {
+                            val dir = File("/storage/emulated/0/Android/data", appPkg)
+                            item.exits = dir!=null && dir.exists()
                             item.hasPermission = dataPkg.contains(appPkg)
                             if (item.hasPermission) {
                                 item.uri = dataPkg[appPkg]
                             }
                         } else {
+                            val dir = File("/storage/emulated/0/Android/obb", appPkg)
+                            item.exits = dir!=null && dir.exists()
                             item.hasPermission = obbPkg.contains(appPkg)
                             if (item.hasPermission) {
                                 item.uri = obbPkg[appPkg]
@@ -159,6 +167,7 @@ class AppSelectDialogFragment : AppCompatDialogFragment() {
         var pkg: String? = null
         var name: String? = null
         var desk: Boolean = false//show in launcher
+        var exits: Boolean = false
         var hasPermission: Boolean = false
         var uri: Uri? = null
     }

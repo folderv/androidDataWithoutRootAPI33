@@ -25,28 +25,49 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.btnGo).setOnClickListener {
-
-        var docId = DOCID_ANDROID_DATA
-        if (Build.VERSION.SDK_INT >= 33) {
-            //docId += "/" + act.packageName
-            val appSelectDialogFragment = AppSelectDialogFragment.newInstance(true)
-            appSelectDialogFragment.onSelectedListener = object:AppSelectDialogFragment.OnSelectedListener{
-                override fun onSelected(appItem: AppSelectDialogFragment.AppItem?) {
-                    appItem?.let {
-                        docId += "/${it.pkg}"
-                        if (it.hasPermission && it.uri != null) {
-                            goSAF(it.uri!!)
-                            //Log.e(TAG, "onSelected: $docId")
-                        } else {
-                            DocumentVM.requestFolderPermission(this@MainActivity, REQ_SAF_R_DATA, docId)
+            var docId = DOCID_ANDROID_DATA
+            if (Build.VERSION.SDK_INT >= 33) {
+                //docId += "/" + act.packageName
+                val appSelectDialogFragment = AppSelectDialogFragment.newInstance(true)
+                appSelectDialogFragment.onSelectedListener = object:AppSelectDialogFragment.OnSelectedListener{
+                    override fun onSelected(appItem: AppSelectDialogFragment.AppItem?) {
+                        appItem?.let {
+                            docId += "/${it.pkg}"
+                            if (it.hasPermission && it.uri != null) {
+                                goSAF(it.uri!!)
+                                //Log.e(TAG, "onSelected: $docId")
+                            } else {
+                                DocumentVM.requestFolderPermission(this@MainActivity, REQ_SAF_R_DATA, docId)
+                            }
                         }
+                        appSelectDialogFragment.dismiss()
                     }
-                    appSelectDialogFragment.dismiss()
                 }
+                appSelectDialogFragment.show(supportFragmentManager, "AppSelect4AndroidData")
             }
-            appSelectDialogFragment.show(supportFragmentManager, "AppSelect4AndroidData")
         }
 
+        findViewById<View>(R.id.btnObb).setOnClickListener {
+            var docId = DOCID_ANDROID_OBB
+            if (Build.VERSION.SDK_INT >= 33) {
+                //docId += "/" + act.packageName
+                val appSelectDialogFragment = AppSelectDialogFragment.newInstance(false)
+                appSelectDialogFragment.onSelectedListener = object:AppSelectDialogFragment.OnSelectedListener{
+                    override fun onSelected(appItem: AppSelectDialogFragment.AppItem?) {
+                        appItem?.let {
+                            docId += "/${it.pkg}"
+                            if (it.hasPermission && it.uri != null) {
+                                goSAF(it.uri!!)
+                                //Log.e(TAG, "onSelected: $docId")
+                            } else {
+                                DocumentVM.requestFolderPermission(this@MainActivity, REQ_SAF_R_OBB, docId)
+                            }
+                        }
+                        appSelectDialogFragment.dismiss()
+                    }
+                }
+                appSelectDialogFragment.show(supportFragmentManager, "AppSelect4AndroidObb")
+            }
         }
     }
 
