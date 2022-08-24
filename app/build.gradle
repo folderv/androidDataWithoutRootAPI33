@@ -11,9 +11,9 @@ android {
     defaultConfig {
         applicationId "com.android.test"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
