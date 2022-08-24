@@ -1,4 +1,4 @@
- ## `Android 13 (Tiramisu API 33)` Read and write /Android/data or /Android/obb not need root
+ ## `Android 13 (Tiramisu API 33)` Read and write _/Android/data_ or _/Android/obb_ not need root
 
  - `Android 13` read and write `/Android/data` or `/Android/obb` ***without root***
 
