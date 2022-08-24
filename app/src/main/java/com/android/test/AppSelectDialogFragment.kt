@@ -100,6 +100,9 @@ class AppSelectDialogFragment : AppCompatDialogFragment() {
                                 item.uri = obbPkg[appPkg]
                             }
                         }
+                        if (!item.exits) {
+                            continue
+                        }
                         pkgList.add(item)
                         pkgSet.add(appPkg)
                     }
@@ -128,6 +131,9 @@ class AppSelectDialogFragment : AppCompatDialogFragment() {
                             if (item.hasPermission) {
                                 item.uri = obbPkg[appPkg]
                             }
+                        }
+                        if (!item.exits) {
+                            continue
                         }
                         pkgList.add(item)
                         pkgSet.add(appPkg)
