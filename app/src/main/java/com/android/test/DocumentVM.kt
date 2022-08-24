@@ -37,7 +37,7 @@ class DocumentVM {
 
         @JvmStatic
         fun checkFolderPermission(context: Context, id: String?): Boolean {
-            return if (Build.VERSION.SDK_INT >= 33) {
+            return if (atLeastTiramisu()) {
                 val treeUri: Uri = getFolderUri(id, true)
                 //Log.e(TAG, "treeUri:" + treeUri)
                 isInPersistedUriPermissions(context, treeUri)
@@ -60,6 +60,10 @@ class DocumentVM {
                 }
             }
             return false
+        }
+
+        fun atLeastTiramisu(): Boolean {
+            return Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
         }
     }
 

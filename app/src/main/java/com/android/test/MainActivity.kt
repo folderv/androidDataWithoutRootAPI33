@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         tv = findViewById(R.id.tv)
         findViewById<View>(R.id.btnGo).setOnClickListener {
             var docId = DOCID_ANDROID_DATA
-            if (Build.VERSION.SDK_INT >= 33) {
+            if (DocumentVM.atLeastTiramisu()) {
                 //docId += "/" + act.packageName
                 val appSelectDialogFragment = AppSelectDialogFragment.newInstance(true)
                 appSelectDialogFragment.onSelectedListener = object:AppSelectDialogFragment.OnSelectedListener{
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.btnObb).setOnClickListener {
             var docId = DOCID_ANDROID_OBB
-            if (Build.VERSION.SDK_INT >= 33) {
+            if (DocumentVM.atLeastTiramisu()) {
                 //docId += "/" + act.packageName
                 val appSelectDialogFragment = AppSelectDialogFragment.newInstance(false)
                 appSelectDialogFragment.onSelectedListener = object:AppSelectDialogFragment.OnSelectedListener{
