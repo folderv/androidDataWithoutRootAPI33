@@ -62,10 +62,6 @@ class DocumentVM {
             return false
         }
 
-        fun atLeastTiramisu(): Boolean {
-            return Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
-        }
-
         fun atLeastR(): Boolean {
             return Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
         }
