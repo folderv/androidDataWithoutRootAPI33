@@ -39,5 +39,15 @@
             android:text="My App"
             android:textAllCaps="false" />
 
+        <TextView
+            android:id="@+id/tvCoolapk"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="https://www.coolapk.com/apk/com.folderv.file"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 </ScrollView>

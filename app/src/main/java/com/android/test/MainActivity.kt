@@ -1,15 +1,15 @@
 package com.android.test
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.documentfile.provider.DocumentFile
-import java.lang.StringBuilder
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -88,6 +88,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        if(isZh(this)){
+            findViewById<View>(R.id.tvCoolapk).visibility = View.VISIBLE
+        }
+
     }
 
     @Synchronized
@@ -155,6 +159,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         super.onActivityResult(requestCode, resultCode, intent)
+    }
+
+    fun isZh(context: Context): Boolean {
+        val locale: Locale = context.resources.configuration.locale
+        val language = locale.language
+        return language.endsWith("zh")
     }
 
 
