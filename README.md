@@ -21,3 +21,12 @@ May be this is the first APP that can visit other app’s exteral data file 😀
 
 Want to [Download](http://folderv.com/2022/08/16/Access-Android-data-on-Android-13/) ?
 
+
+## 中文
+
+Android 13 仍然可以访问 /Android/data 和 /Android/obb 目录
+
+FV 文件管理是首个支持Android 13 系统免root访问 /Android/data/ 和 /Android/obb/ 目录的工具。
+
+Android 13 应用不能直接授权访问/Android/data 和 /Android/obb，需要针对每个应用单独授权访问。
+
