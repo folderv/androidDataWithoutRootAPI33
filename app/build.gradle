@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.android.test"
+        applicationId "com.android.api33dataobb"
         minSdk 21
         targetSdk 32
         versionCode 1

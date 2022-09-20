@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Foo</string>
+    <string name="app_name">android13dataAccess</string>
     <string name="select">select</string>
     <string name="cancel">cancel</string>
 </resources>
