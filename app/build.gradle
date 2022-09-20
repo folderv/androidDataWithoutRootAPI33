@@ -53,7 +53,7 @@ dependencies {
     //annotationProcessor "com.github.bumptech.glide:compiler:4.13.2"
     kapt "com.github.bumptech.glide:compiler:4.13.2"
 
-    def appiconloaderVersion = "1.4.0"//1.4.0
+    def appiconloaderVersion = "1.5.0"//1.4.0
     // For using with Glide.
     implementation "me.zhanghai.android.appiconloader:appiconloader-glide:$appiconloaderVersion"
     // For using with Coil.
