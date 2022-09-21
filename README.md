@@ -34,6 +34,6 @@ Android 13 仍然可以访问 /Android/data 和 /Android/obb 目录
 
 Android 13 应用不能直接授权访问/Android/data 和 /Android/obb，需要针对每个应用单独授权访问。
 
-改方法首先在Android 13 beta版本上发现并验证，Android 13正式版发布之后没有改变。所以 __FV 文件管理是首个支持Android 13 系统免root访问 /Android/data/ 和 /Android/obb/ 目录的工具__。
+该方法首先在Android 13 beta版本上发现并验证，Android 13正式版发布之后没有改变。所以 __FV 文件管理是首个支持Android 13 系统免root访问 /Android/data/ 和 /Android/obb/ 目录的工具__。
 
 
