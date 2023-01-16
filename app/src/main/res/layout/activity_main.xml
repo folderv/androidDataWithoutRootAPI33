@@ -26,6 +26,13 @@
             android:text="/Android/obb"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run Tests"
+            android:textAllCaps="false" />
+
         <TextView
             android:id="@+id/tv"
             android:layout_width="wrap_content"

@@ -18,6 +18,12 @@ class DocumentVM {
         @RequiresApi(Build.VERSION_CODES.O)
         fun requestFolderPermission(activity: Activity, requestCode: Int, id: String?) {
             val i = getUriOpenIntent(getFolderUri(id, false))
+
+            val flags = Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION or
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION or
+                    Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            i.addFlags(flags)
+
             activity.startActivityForResult(i, requestCode)
         }
 
