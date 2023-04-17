@@ -30,3 +30,11 @@ jobs:
       with:
         name: apk-debug
         path: app/build/outputs/apk/debug/app-debug.apk
+    - name: Build with Gradle
+      run: ./gradlew assembleDebugBundle
+    - name: Upload aab
+      uses: actions/upload-artifact@v3
+      if: ${{ !github.head_ref }}
+      with:
+        name: apk-debug
+        path: app/build/outputs/apk/debug/app-debug.aab
