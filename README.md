@@ -1,10 +1,14 @@
- ## `Android 13+ (Tiramisu API 33+)` Read and write /Android/data or /Android/obb not need root
 
- ### Deprecated
- 
- Read this:
+ ## Deprecated
+
+ Read this new method to access /Android/data on Android 14 with shizuku:
 
 http://folderv.com/2023/11/24/access-Android-data-and-Android-obb-on-Android-14/
+
+
+
+
+## `Android 13+ (Tiramisu API 33+)` Read and write /Android/data or /Android/obb not need root
 
 
 
